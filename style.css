@@ -1,0 +1,111 @@
+:root {
+    --black:#0F1117;
+    --gray-dark:#1D2027;
+    --gray-light:#8A93A7;
+    --white: #D1D7E3;
+    --blue: #128ED3;
+    --green: #1BDD5D;
+    --red: #DF1818;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-smoothing: antialiased;
+    list-style: none;
+    border-style: none;
+    outline: none;
+}
+
+html, body {
+    background-color: var(--black);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter",sans-serif;
+   
+}
+
+.container {
+    width: 500px;
+    background-color: var(--gray-dark);
+    padding: 48px;
+    border-radius: 12px;
+}
+
+.input-tarefa {
+    background-color: var(--black);
+    height: 48px;
+    width: 300px;
+    padding: 0 20px;
+    border-radius: 8px;
+    color: var(--gray-light);
+}
+
+.btn-tarefa {
+    height: 48px;
+    padding: 0 28px;
+    border-radius: 8px;
+    background-color: var(--blue);
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    float: right;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-tarefa:hover {
+    filter: brightness(1.2);
+}
+
+.btn-tarefa:active{
+    filter: brightness(1.7);
+    scale: 1.2;
+}
+.lista-tarefa {
+    width: 100%;
+}
+
+.tarefa {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-radius: 8px;
+    background-color: var(--black);
+    box-sizing: border-box;
+    color: var(--white);
+}
+
+.tarefa:first-child {
+    margin-top: 48px;
+}
+
+.tarefa:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.icone {
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.tarefa:hover .icone {
+    opacity: 1.0;
+    transform: translateY(0);
+}
+
+.icone:hover {
+    filter: brightness(1.2);
+    scale: 1.2;
+}
+
+.realizada {
+    color: var(--green);
+    opacity: 0.5;
+    text-decoration: line-through;
+}
